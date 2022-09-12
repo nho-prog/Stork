@@ -1,6 +1,18 @@
-Module name:
+Module name: ESB Request Handler
 Logic -
+Input -
+Output -
 Submodules:
 Logic -
+Input -
+Output -
+
 Global variables
 Test cases per submodule/module
+
+Module name: BMD
+
+Module name: Persistence Manager
+Logic:
+Input: ESB request type
+Output: Request's current status
