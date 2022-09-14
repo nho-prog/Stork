@@ -1,0 +1,27 @@
+We will start writing the code from the modele <ESB Request Handler> till the module <Transport Manager>.
+Meanwhile we will be looking deep into sub-modules and studying required tools and techniques.
+After all we will be writing the proper code and also doing unit testing.
+we will be handling all the errors and solving them.
+Our flow of making this project would look like following (downward) :-
+                            
+                              ESB Request Handler
+                                      |
+                             Persistence Manager
+                  (Transactional message exchange and Datastore)
+                                      |
+                                 Task Executor
+                        (Task Queue and worker thread)
+                                      |
+                               Message Router
+                      (Route management and Routing table)
+                                      |
+                            Transformation Manager
+                          (App to ESB and ESB to App)
+                                      |
+                               Security Manager
+                (Message authentication and Message flow authorization)
+                                      |
+                               Transport Manager
+                      [ HTTP(S),SFTP,MQ,Email and Sockets ]
+                                      |
+                         ESB_App.c will be ready to use
