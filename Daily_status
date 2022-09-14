@@ -1,3 +1,11 @@
+14 Sept 2022
+work update:
+1. Spent time on munit learning. 
+2. Tried to setup the skeleton code. Errors persist.
+3. Dynamically loaded libraries - working is not clear yet.
+4. Tried to understand the APIs for persistence manager.
+5. Module/sub-module division is done.
+
 12 sept 2022
 work update:
 i. understand the project completely and divide the project into modules 
