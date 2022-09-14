@@ -1,18 +1,45 @@
-Module name: ESB Request Handler
-Logic -
-Input -
-Output -
-Submodules:
-Logic -
-Input -
-Output -
+Module Name - BMD
+Logic - An XML document which contains sender applications and message information
 
-Global variables
-Test cases per submodule/module
+Module Name - ESB Request Handler
+Logic - Messages are come via HTTP POST request or a plain TCP socket
+Input - Business Message Document (BMD) which is an XML document
+Output - put the received BMD into a persistent store and Create a new “request processing” task and add that into a task queue
 
-Module name: BMD
+Module name - Persistence Manager
+Logic - persist the request information
+Input - ESB request type
+Output - Request's current status
 
-Module name: Persistence Manager
-Logic:
-Input: ESB request type
-Output: Request's current status
+Submodules - Transactional message exchange and Datastore
+Logic - store the request into the database and Handling the requsts which are not validate
+
+Module Name - Task Queue
+Logic - It contains basically different states of task  
+Input - ESB request type
+Output - worker thread
+
+Module Name - Worker Thread 
+Logic - handle the processing of each BMD request if the status of the task is avaialble and this process continue until the processing_attempts count reach a threshold
+Input - task queue
+Output - message router
+
+Module Name - Message Router
+Logic - It basically route the message using routing information which maintained in relational database like routing table, transform_config and transport_config tables
+Input - worker thread
+Output - transport manager
+
+Module Name - Security Manager
+Logic - It provide authorization to operations in ESB and implement functions to authenticate the messages for transform to destination application
+Input - message router
+Output - transformation manager
+
+Module Name - Transformation Manager
+Logic - transform the BMD message into the format which is expected by the destination application
+Input - security manager
+Output - transport manager
+
+Module Name - Transport Manager
+Logic - send the message to the destination using different type of APIs like HTTP, SFTP, MQ, Email and Sockets
+Input - transformation manager
+Output - Destination application
