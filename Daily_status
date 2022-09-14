@@ -4,7 +4,11 @@ work update:
 2. Tried to setup the skeleton code. Errors persist.
 3. Dynamically loaded libraries - working is not clear yet.
 4. Tried to understand the APIs for persistence manager.
-5. Module/sub-module division is done.
+5. Module/sub-module division is done in the sandbox.
+Action items:
+1. Update the module/sub-module division file on the git repo. And action plan.
+2. Use the dynamically loaded libraries in small examples to understand their working.
+3. Skeleton code - setup will continue. Post queries on the nho-prog group.
 
 12 sept 2022
 work update:
