@@ -1,4 +1,15 @@
+15 sept 2022
+--------------
+work update:
+1.Updated the module/sub-module division file on the git repo.
+2.Prepared the Action Plan.
+3.Used dynamically loaded libraries and get to know about diffrent functions related to DLL.
+4. Setup for skeleton code has done.
+Action items:
+1.Start writing the code in provided skeleton code and learn related tools and techniques.
+
 14 Sept 2022
+-------------
 work update:
 1. Spent time on munit learning. 
 2. Tried to setup the skeleton code. Errors persist.
@@ -11,10 +22,12 @@ Action items:
 3. Skeleton code - setup will continue. Post queries on the nho-prog group.
 
 13 sept 2022
+-------------
 work update:
 i. continue with the action items of 12 sept and go deeper into them 
 
 12 sept 2022
+--------------
 work update:
 i. understand the project completely and divide the project into modules 
 ii. try to play with different APIs and skeletion code and understand the programming tools
@@ -25,6 +38,7 @@ ii. Look into unit testing
 iii. Understand and work with esb_app code
 
 9 sept 2022
+-------------
 work update:
 i. setup all required enviroment
 ii. read and understand how to divide the project into modules and submodules
@@ -34,6 +48,7 @@ i. go deeper into the modules and submodules
 ii. familiar with git push and pull requests
 
 8 sept 2022
+------------
 work update:
 i. download and install the softwares
 ii. learn the programing languages C, C++ 
