@@ -6,14 +6,18 @@
  * TODO: This is to be implemented separately.
  */
 bmd parse_bmd_xml(char* bmd_file_path) {
-    bmd b;
-    bmd_envelop envl;
+    bmd b = xmlParseFile(bmd_file_path);
+    if (b == NULL) {
+        printf("ERROR: Document not parsed successfully. \n");
+        return NULL;
+    }
+    /*bmd_envelop envl;
     envl.sender_id = "TEST-GUID-1";
     envl.destination_id = "TEST-GUID-2";
     envl.message_type = "TEST-GUID-3";
 
     b.envelop = envl;
-    b.payload = "Some data here";
+    b.payload = "Some data here";*/
     return b;
 }
 
