@@ -1,23 +1,26 @@
 #include<stdio.h>
 #include "email.h"
 #include "esb.h"
-
+#include<stdbool.h>
 /**
  * TODO: This is to be implemented separately.
  */
+bmd que[101];
+int front,rear=-1;
 bmd parse_bmd_xml(char* bmd_file_path) {
-    bmd b = xmlParseFile(bmd_file_path);
+    /*bmd b = xmlParseFile(bmd_file_path);
     if (b == NULL) {
         printf("ERROR: Document not parsed successfully. \n");
         return NULL;
-    }
-    /*bmd_envelop envl;
+    }*/
+    bmd b;
+    bmd_envelop envl;
     envl.sender_id = "TEST-GUID-1";
     envl.destination_id = "TEST-GUID-2";
     envl.message_type = "TEST-GUID-3";
 
     b.envelop = envl;
-    b.payload = "Some data here";*/
+    b.payload = "Some data here";
     return b;
 }
 
@@ -25,10 +28,28 @@ int is_bmd_valid(bmd b)
 {
     int valid = 1; // 1 => vaild, -1 => invalid
     // TODO: Implement the validation logic here
+    if(!b.envelop.destination_id || !b.envelop.message_type || !b.envelop.sender_id ) 
+    {
+        printf("BMD must have [sender_id,destination_id and msg_type]");
+        valid=-1;
+    }
 
     return valid;
 }
+bool isQfull()
+{
+    if(rear==101)
+     return true;
+    else return false;
 
+}
+void enQueue(bmd b)
+{
+    if(front==-1)
+     front=0;
+    rear++;
+    que[rear]=b;
+}
 int queue_the_request(bmd b)
 {
     int success = 1; // 1 => OK, -1 => Error cases
@@ -37,6 +58,20 @@ int queue_the_request(bmd b)
      * and implement other logic for enqueueing the request
      * as specified in Theory of Operation.
      */
+    if(is_bmd_valid(b))
+     {
+        if(isQfull())
+        {
+            success=-1;
+        }
+        else{
+            enQueue(b);
+        }
+
+     }
+     else{
+        success=-1;
+     }
     return success;
 }
 
