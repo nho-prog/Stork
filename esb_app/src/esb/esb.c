@@ -8,11 +8,6 @@
 bmd que[101];
 int front,rear=-1;
 bmd parse_bmd_xml(char* bmd_file_path) {
-    /*bmd b = xmlParseFile(bmd_file_path);
-    if (b == NULL) {
-        printf("ERROR: Document not parsed successfully. \n");
-        return NULL;
-    }*/
     bmd b;
     bmd_envelop envl;
     envl.sender_id = "TEST-GUID-1";
