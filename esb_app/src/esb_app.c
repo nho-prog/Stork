@@ -31,7 +31,7 @@
 
 #include <kore/kore.h>
 #include <kore/http.h>
-//#include <pthread.h>
+#include <pthread.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/time.h>
@@ -40,11 +40,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <stdbool.h>
-#include <pthread.h>
 #include <sys/un.h>
 #include <stddef.h>
 
