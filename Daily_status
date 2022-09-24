@@ -1,3 +1,11 @@
+23 sept 2022
+-------------
+work update:
+1. write some code for esb request handler and try to understand more on socket programming
+Action items:
+1. try to write some code for worker thread
+2. look into sqlite documents sent by sodhi sir and try to know how request's are fetch from database 
+
 22 sept 2022
 -------------
 work update:
