@@ -33,17 +33,17 @@ int is_bmd_valid(bmd b)
 }
 bool isQfull()
 {
-    if(rear==101)
+    if(rear == 101)
      return true;
     else return false;
 
 }
 void enQueue(bmd b)
 {
-    if(front==-1)
-     front=0;
+    if(front == -1)
+     front = 0;
     rear++;
-    que[rear]=b;
+    que[rear] = b;
 }
 int queue_the_request(bmd b)
 {
@@ -57,7 +57,7 @@ int queue_the_request(bmd b)
      {
         if(isQfull())
         {
-            success=-1;
+            success = -1;
         }
         else{
             enQueue(b);
@@ -65,7 +65,7 @@ int queue_the_request(bmd b)
 
      }
      else{
-        success=-1;
+        success = -1;
      }
     return success;
 }
