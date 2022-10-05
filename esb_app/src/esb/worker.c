@@ -17,7 +17,7 @@ int fetch_new_request_from_db(bmd *request)
         return -1;
     }
 
-    return 1; // 1 => OK, -1 => Errors
+    return 1; // 1 => OK, -1 => Errors.
 }
 
 /**
